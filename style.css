@@ -202,30 +202,20 @@ body {
     color: white;
 }
 
-#btnSame:focus {
-    background-color: black;
-    color: white;
-}
+
 
 #btnLower:hover {
     background-color: white;
     color: black;
 }
 
-#btnLower:focus {
-    background-color: white;
-    color: black;
-}
+
 
 #btnHigher:hover {
     background-color: white;
     color: black;
 }
 
-#btnHigher:focus {
-    background-color: white;
-    color: black;
-}
 
 
 #valueM {
