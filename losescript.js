@@ -26,7 +26,7 @@ function randomFail() {
 }
 
 function randomSucces() {
-    var l = backgroundFail.length;
+    var l = backgroundSucces.length;
     var x = Math.floor(Math.random() * l);
     var imageBack = backgroundSucces[x];
     document.getElementById("backgroundImage").style.backgroundImage = "url(" + imageBack +")";
