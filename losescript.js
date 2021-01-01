@@ -1,4 +1,5 @@
 var score = sessionStorage.getItem("Score");
+var lang = localStorage.getItem('lang');
 
 document.getElementById("scoreDisplay").textContent = score;
 
@@ -32,13 +33,15 @@ function randomSucces() {
     document.getElementById("backgroundImage").style.backgroundImage = "url(" + imageBack +")";
 }
 
+var textQuote;
+var textQuoteFail;
 
 if (score > 10) {
     randomSucces();
-    document.getElementById("textQuote").textContent = "Great this is good !!"
+    textQuote = "Great this is good !!"
 }else {
     randomFail();
-    document.getElementById("textQuote").textContent = "This is pretty bad..."
+    textQuoteFail = "This is pretty bad..."
 }
 
 var buttonRestart = document.getElementById("btnRestart");
@@ -48,3 +51,17 @@ buttonRestart.addEventListener("click", function() {
     sessionStorage.removeItem("Score", score);
     window.location.href = "index.html";
 })
+
+if (lang == "french") {
+    document.getElementById("textNet").textContent = "Ton score est de";
+    document.getElementById("btnRestart").textContent = "RECOMMENCER";
+    textQuote  = "Pas mal du tout !";
+    textQuoteFail = "C'est vraiment nul..."
+    document.getElementById("btnRestart").style.width = "130px";
+}
+
+if (score > 10) {
+    document.getElementById("textQuote").textContent = textQuote;
+}else {
+    document.getElementById("textQuote").textContent = textQuoteFail;
+}

@@ -2,6 +2,12 @@ var buttonHigher = document.getElementById("btnHigher");
 var buttonLower = document.getElementById("btnLower");
 var buttonSame = document.getElementById("btnSame");
 
+//pop up language
+
+
+
+
+
 //SET CLASS AND ALL DATA
 class People {
     constructor(name, netWorth, image) {
@@ -272,4 +278,56 @@ function nextStep() {
 
 }
 
-console.log(score);
+function togglePopup(){
+    document.getElementById("popup-1").classList.toggle("active");
+  }  
+
+
+
+var buttonFrench = document.getElementById("french");
+var buttonEnglish = document.getElementById("english");
+
+var french = "francais";
+var english = "anglais";
+
+
+buttonFrench.addEventListener("click", function() {
+    document.getElementById("popup-1").classList.remove("active");
+    myLanguage(french);
+    document.location.reload();
+})
+
+buttonEnglish.addEventListener("click", function() {
+    document.getElementById("popup-1").classList.remove("active");
+    myLanguage(english);
+})
+
+var myLanguage;
+
+function myLanguage(lang) {
+    if (lang == "francais") {
+        myLanguage = "french";
+        localStorage.setItem('lang', myLanguage);
+    } else {
+        myLanguage = "english";
+        localStorage.setItem('lang', myLanguage);
+    }
+}
+
+var lelangage;
+
+lelangage = localStorage.getItem("lang");
+
+
+if (lelangage === "french") {
+    document.getElementById("textNet").textContent = "FORTUNE";
+    document.getElementById("textNet2").textContent = "SA FORTUNE EST";
+    document.getElementById("btnHigher").textContent = "PLUS HAUT";
+    document.getElementById("btnLower").textContent = "PLUS BAS";
+    document.getElementById("btnSame").textContent = "PAREIL";
+}
+
+
+if (lelangage !== "french") {
+    setTimeout(togglePopup, 2000);
+}
