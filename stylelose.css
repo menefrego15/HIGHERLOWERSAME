@@ -105,3 +105,20 @@ button {
     width: fit-content;
 }
 
+#setLanguage {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    color: white;
+    border: none;
+    font-weight: 700;
+    background: none;
+    text-align: center;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: fit-content;
+    transform: translateX(-50%) translateY(-50%);
+    text-transform: uppercase;
+    font-size: 7px;
+}

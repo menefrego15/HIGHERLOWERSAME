@@ -159,6 +159,7 @@ if (lang == "french") {
     document.getElementById("textNet").textContent = "Ton score est de";
     document.getElementById("btnRestart").textContent = "RECOMMENCER";
     document.getElementById("btnRestart").style.width = "130px";
+    document.getElementById("setLanguage").textContent = "changer langue";
     
     if (answer === "HIGHER") {
         answer = "PLUS HAUT";
@@ -174,8 +175,10 @@ if (lang == "english") {
     document.getElementById("ans").textContent = "CORRECT ANSWER: " + answer;
 }
 
+var buttonLanguage = document.getElementById("setLanguage");
 
 
-
-
-console.log(answer);
+buttonLanguage.addEventListener("click", function() {
+    localStorage.removeItem("lang");
+    window.location.href = "index.html";
+})
