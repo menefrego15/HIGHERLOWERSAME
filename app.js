@@ -4,7 +4,13 @@ var buttonSame = document.getElementById("btnSame");
 
 //pop up language
 
+var seconds = 0;
 
+function incrementSeconds() {
+    seconds += 1;
+}
+
+setInterval(incrementSeconds, 1000);
 
 
 
@@ -229,9 +235,17 @@ buttonHigher.addEventListener("click", function() {
     }else {
         animateBtnRed(buttonHigher);
         setTimeout(loseDisplay(score), 500);
+        if (net2 == net) {
+            correctAns = "SAME";
+        }else {
+            correctAns = "LOWER";
+        }
+        sessionStorage.setItem("ans", correctAns);
+        sessionStorage.setItem("second", seconds);
     }
 })
 
+var correctAns;
 
 
 buttonLower.addEventListener("click", function() {
@@ -242,6 +256,13 @@ buttonLower.addEventListener("click", function() {
     }else {
         animateBtnRed(buttonLower);
         setTimeout(loseDisplay(score), 500);
+        if (net2 == net) {
+            correctAns = "SAME";
+        }else {
+            correctAns = "HIGHER";
+        }
+        sessionStorage.setItem("ans", correctAns);
+        sessionStorage.setItem("second", seconds);
     }
 })
 
@@ -253,8 +274,19 @@ buttonSame.addEventListener("click", function() {
     }else {
         animateBtnRed(buttonSame);
         setTimeout(loseDisplay(score), 500);
+        if (net2 > net) {
+            correctAns = "HIGHER";
+        }else {
+            correctAns = "LOWER";
+        }
+        sessionStorage.setItem("ans", correctAns);
+        sessionStorage.setItem("second", seconds);
     }
 })
+
+
+
+
 
 
 
@@ -331,3 +363,9 @@ if (lelangage === "french") {
 if (lelangage !== "french") {
     setTimeout(togglePopup, 2000);
 }
+
+
+
+
+
+
