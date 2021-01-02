@@ -360,7 +360,7 @@ if (lelangage === "french") {
 }
 
 
-if (lelangage !== "french") {
+if (lelangage !== "french" && lelangage != "english") {
     setTimeout(togglePopup, 2000);
 }
 

@@ -1,5 +1,11 @@
+
+
 var score = sessionStorage.getItem("Score");
 var lang = localStorage.getItem('lang');
+
+var answer;
+
+answer = sessionStorage.getItem("ans");
 
 document.getElementById("scoreDisplay").textContent = score;
 
@@ -147,19 +153,29 @@ buttonRestart.addEventListener("click", function() {
     window.location.href = "index.html";
 })
 
+
+
 if (lang == "french") {
     document.getElementById("textNet").textContent = "Ton score est de";
     document.getElementById("btnRestart").textContent = "RECOMMENCER";
     document.getElementById("btnRestart").style.width = "130px";
-    document.getElementById("Ans").textContent = "BONNE RÉPONSE: ";
     
+    if (answer === "HIGHER") {
+        answer = "PLUS HAUT";
+    }else if (answer === "LOWER") {
+        answer = "PLUS BAS";
+    }else {
+        answer = "SAME";
+    }
+    document.getElementById("ans").textContent = "BONNE RÉPONSE: " + answer;
+}
+
+if (lang == "english") {
+    document.getElementById("ans").textContent = "CORRECT ANSWER: " + answer;
 }
 
 
-var answer;
 
-answer = sessionStorage.getItem("ans");
 
-document.getElementById("correct").innerText = answer;
 
 console.log(answer);
