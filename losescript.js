@@ -151,6 +151,7 @@ if (lang == "french") {
     document.getElementById("textNet").textContent = "Ton score est de";
     document.getElementById("btnRestart").textContent = "RECOMMENCER";
     document.getElementById("btnRestart").style.width = "130px";
+    document.getElementById("Ans").textContent = "BONNE RÉPONSE: ";
     
 }
 
