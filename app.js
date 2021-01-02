@@ -77,7 +77,7 @@ class People {
   var person50 = new People("George Clooney","500000000","https://s.france24.com/media/display/53983b54-0f4e-11e9-a160-005056a964fe/w:1280/p:16x9/george_clooney_satellite.webp");
   var person51 = new People("Robert De Niro","500000000","https://scontent-rtl.akamaized.net/GED/06180000/6188800/6188819_700x0.webp");
   var person52 = new People("Mel Gibson","425000000","https://scontent-rtl.akamaized.net/GED/01090000/1090500/1090515_700x0.webp");
-  var person53 = new People("Arnold Schwarzenegger","400000000","https://akns-images.eonline.com/eol_images/Entire_Site/2018016/rs_600x600-180116093750-600.Arnold-Schwarzenegger-JR-011618.jpg?fit=around%7C700:700&output-quality=90&crop=700:700;center,top");
+  var person53 = new People("Schwarzenegger","400000000","https://akns-images.eonline.com/eol_images/Entire_Site/2018016/rs_600x600-180116093750-600.Arnold-Schwarzenegger-JR-011618.jpg?fit=around%7C700:700&output-quality=90&crop=700:700;center,top");
   var person54 = new People("Jackie Chan","400000000","https://i.insider.com/5267d845eab8ea1106d73528?width=1100&format=jpeg&auto=webp");
   var person55 = new People("Sylvester Stallone","400000000","https://cdn-biiinge.konbini.com/images/files/2019/05/cobra-feat.jpg?webp=");
   var person56 = new People("Tom Hanks","400000000","https://scontent-rtl.akamaized.net/GED/09360000/9362900/9362953_700x0.webp");
